@@ -11,6 +11,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+ font-family: futura, sans-serif;
 
   background-color: #DB70B8;
 
@@ -27,6 +28,34 @@ html {
   width: 300px;
   background-image: url(../artwork/clock-face.svg);
   position: relative;
+  margin: 0 auto 0;
+}
+
+.clock-face:target .hand-hour {
+  transform: rotate(360deg);
+}
+
+.clock-face:target .hand-minute {
+  transform: rotate(4320deg);
+}
+
+.button {
+    font-family: futura, sans-serif;
+    background-color: #7F1C68;
+    color: white;
+    padding: 2.5em;
+    border-radius: 100%;
+    display: inline-block;
+    text-decoration: none;
+    transform: all 2s linear;
+}
+
+.butt {
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #993399;
 }
 
 .hand {
@@ -34,9 +63,10 @@ html {
   position: absolute;
   /*top: 70px;
   left: 142px;*/
-  top: calc(50% - 76px);
+  bottom: 50%;
   left: calc(50% - 8px);
-    
+  transition: all 6s linear;
+  transform-origin: bottom center;
 }
 
 .center {
